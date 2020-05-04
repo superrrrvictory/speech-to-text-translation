@@ -1,1 +1,3 @@
-have a look
+文本主要用到了ibm的语音转文本api和谷歌api
+
+只需要修改
