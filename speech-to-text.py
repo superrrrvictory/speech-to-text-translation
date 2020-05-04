@@ -1,6 +1,6 @@
 from ibm_watson import SpeechToTextV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-from ibm_watson import LanguageTranslatorV3
+
 
 from moviepy.editor import *
 from pydub.silence import split_on_silence, detect_nonsilent
@@ -49,14 +49,10 @@ os.environ.setdefault(
 )
 
 # 授权获得speech-to-text的使用权限
-speech_authenticator = IAMAuthenticator('yTFbV5j7yULHOZGU67UVS0vmCENKlIbQErZEl3TJPQFe')
+speech_authenticator = IAMAuthenticator('你的apikey')
 speech_to_text = SpeechToTextV1(authenticator=speech_authenticator)
 speech_to_text.set_service_url(
-    'https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/704f68a6-3924-4bd0-a760-3b03fd756b93')
-translator_authenticator = IAMAuthenticator('8jUBnZk42eEFLmGumPk2LUfiWQrnrY8qibwouCT6ciLG')
-language_translator = LanguageTranslatorV3(version='2020-04-20', authenticator=translator_authenticator)
-language_translator.set_service_url(
-    'https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/faf8761f-48a9-4bbe-9644-255b526d56a6')
+    '你的url地址')
 
 # 授权获得google_translate的使用权限
 client = translate.Client()
