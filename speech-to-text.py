@@ -39,14 +39,9 @@ def detect_nonsilence_audiotime(filename, format):
 
 
 # 设置好google 的身份认证与系统的代理，修改credentials的文件地址和代理地址
-os.environ.setdefault(
-    'GOOGLE_APPLICATION_CREDENTIALS',
-    '/Users/lijiayu/Downloads/video translator-2de8ab711797.json'
-)
-os.environ.setdefault(
-    'https_proxy',
-    'http://127.0.0.1:41091'
-)
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']='/Users/lijiayu/Downloads/video translator-2de8ab711797.json'
+
+os.environ['https_proxy']='http://127.0.0.1:41091'
 
 # 授权获得speech-to-text的使用权限
 speech_authenticator = IAMAuthenticator('你的apikey')
