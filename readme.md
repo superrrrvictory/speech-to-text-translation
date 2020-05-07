@@ -10,5 +10,8 @@
 5. run
 6. 默认会将文件保存为text_to_export.csv的文件
 
+pip install google-cloud-storage
+pip install google-cloud-translate==2.0.0
+
 
 
